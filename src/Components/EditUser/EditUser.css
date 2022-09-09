@@ -1,0 +1,144 @@
+/* EditUser title section */
+
+.editUser_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: 600;
+  align-items: center;
+  color: white;
+  background-color: red;
+  font-size: 25px;
+  font-style: italic;
+  margin-bottom: 5%;
+}
+
+/* buttons for create new employee and goto the employees list styles */
+
+.add_employee-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.left_add_icons {
+  padding: 1px;
+  margin-left: 2px;
+  margin-right: 3px;
+}
+
+/* Profile imgs */
+
+.signup-profile-pic__container {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  top: -40px;
+  left: 36%;
+}
+
+.signup-profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  object-fit: cover;
+}
+
+.profile_pic_add_icons {
+  position: absolute;
+  bottom: 4px;
+  right: 8px;
+  color: white;
+  background: transparent;
+  cursor: pointer;
+  z-index: 99;
+}
+
+/* Form styles */
+
+.create-emp-form {
+  background: rgba(51, 170, 51, 0.2);
+  border-radius: 20px;
+  padding: 15% 5% 15% 5%;
+}
+
+.create-emp-form select {
+  border: none;
+  outline: none;
+  border-bottom: 2px dotted black;
+  border-radius: 10px;
+  background-color: white;
+  padding: 5px 10px 5px 10px;
+  font-weight: 500;
+  font-size: medium;
+  width: 100px;
+  margin: 3%;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: none;
+  outline: none;
+  border-bottom: 2px dotted black;
+  border-radius: 10px;
+  background-color: white;
+  padding: 5px 10px 5px 10px;
+  font-size: medium;
+  font-weight: 500;
+  width: 210px;
+  margin: 3%;
+}
+
+input[type="email"] {
+  border: none;
+  outline: none;
+  border-bottom: 2px dotted black;
+  border-radius: 10px;
+  background-color: white;
+  padding: 5px 10px 5px 10px;
+  font-weight: 500;
+  font-size: medium;
+  width: 230px;
+  margin: 3%;
+}
+
+.createUser_input_form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* button styles */
+
+.create_User_btns {
+  position: relative;
+  top: 30px;
+  left: 26%;
+}
+
+.create_emp_btn {
+  background-color: whitesmoke;
+  color: darkblue;
+  border: 1px solid black;
+  outline: red;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0px 20px 0px 20px;
+  margin-right: 10px;
+}
+
+.create_emp_btn:hover {
+  background-color: red;
+}
+
+.reset_emp_btn {
+  background-color: whitesmoke;
+  color: darkblue;
+  border: 1px solid black;
+  outline: red;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0px 20px 0px 20px;
+}

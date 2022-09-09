@@ -1,0 +1,181 @@
+/* Title Section */
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-weight: 600;
+  align-items: center;
+  color: white;
+  background-color: red;
+  font-size: 30px;
+  font-style: italic;
+  margin-bottom: 5%;
+}
+
+/* Filter div styles */
+
+.employee_list_box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4%;
+}
+
+.filter-emp select {
+  background-color: white;
+  border-radius: 13px;
+  padding: 2px 15px 2px 10px;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  color: darkblue;
+}
+
+/* Create Employee btn Styles */
+
+.createuser-btn {
+  background: white;
+  padding: 2px 10px 2px 10px;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  float: right;
+  text-decoration: none;
+  color: darkblue;
+}
+
+.createuser-btn:hover {
+  background: rgb(162, 149, 149);
+  box-shadow: #333;
+}
+
+/* Add user icons */
+
+.add_icons {
+  padding: 1px;
+  margin-left: 5px;
+}
+
+.add_icons:hover {
+  cursor: pointer;
+}
+
+.add_employee_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+  padding: 3px 10px;
+}
+
+/* List of employees division */
+
+.list_container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px 10px 0px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.list_item {
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px;
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25px;
+  font-weight: 500;
+  font-style: italic;
+  margin: 5px 0px;
+}
+
+.list_item_action {
+  padding: 4px 15px;
+  font-size: large;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  margin-left: 0%;
+}
+
+.list_item_body {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Profile Images */
+
+img {
+  object-fit: contain;
+  height: 60px;
+  width: fit-content;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.contentBox {
+  width: 100%;
+}
+
+.action {
+  padding: 10px;
+  margin-left: 15px;
+  border-radius: 500px;
+  font-weight: 600;
+  box-sizing: content-box;
+}
+
+.list_item_info {
+  color: crimson;
+  font-size: large;
+}
+
+.action:hover {
+  background-color: #f6f5f5;
+  cursor: pointer;
+}
+
+/* Pagination styles */
+.pagination_section {
+  position: relative;
+  top: 90%;
+  left: 20%;
+  margin-bottom: 20px;
+}
+
+.paginationbtns {
+  width: 80%;
+  height: 20px;
+  list-style: none;
+  display: flex;
+}
+
+.paginationbtns a {
+  padding: 5px 10px 5px 10px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid red;
+  color: red;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.paginationbtns a:hover {
+  color: whitesmoke;
+  background-color: red;
+}
+
+.paginationActive a {
+  color: white;
+  background-color: red;
+}
