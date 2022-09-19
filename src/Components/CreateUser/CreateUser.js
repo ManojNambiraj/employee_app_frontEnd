@@ -98,12 +98,7 @@ function CreateUser() {
       {/* updating employee form section using formik */}
 
       <div>
-        <form
-          className="create-emp-form"
-          onSubmit={() => {
-            formik.handleSubmit();
-          }}
-        >
+        <form className="create-emp-form" onSubmit={formik.handleSubmit}>
           <div className="signup-profile-pic__container">
             <img
               src={imagePreview || profileImg || uploadingImg}

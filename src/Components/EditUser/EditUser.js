@@ -15,50 +15,6 @@ function EditUser() {
   const params = useParams();
   const navigate = useNavigate();
 
-  //Image upload state
-  const [image, setImage] = useState(null);
-  const [uploadingImg, setUploadingImg] = useState(false);
-  const [imagePreview, setImagePreview] = useState(null);
-
-  function validateImg(e) {
-    const file = e.target.files[0];
-    if (file.size >= 1048576) {
-      return alert("Max file size is 1Mb");
-    } else {
-      setImage(file);
-      setImagePreview(URL.createObjectURL(file));
-    }
-  }
-
-  async function uploadImage() {
-    const data = new FormData();
-    data.append("file", image);
-    data.append("upload_preset", "iumncoar");
-    try {
-      setUploadingImg(true);
-      let res = await fetch(
-        "https://api.cloudinary.com/v1_1/fullstackfordeveloping/image/upload",
-        {
-          method: "post",
-          body: data,
-        }
-      );
-      const urlData = await res.json();
-      setUploadingImg(false);
-      return urlData.url;
-    } catch (error) {
-      setUploadingImg(false);
-      console.log(error);
-    }
-  }
-
-  const imgSubmit = async (e) => {
-    e.preventDefault();
-    if (!image) return alert("Please Upload your profile picture");
-    const url = await uploadImage(image);
-    console.log(url);
-  };
-
   // Formik for handling form data and updating employee details
 
   let formik = useFormik({
@@ -93,7 +49,7 @@ function EditUser() {
 
   useEffect(() => {
     userDatas();
-  });
+  }, []);
 
   return (
     <>
@@ -127,40 +83,7 @@ function EditUser() {
       {/* updating employee form section using formik */}
 
       <div>
-        <form
-          className="create-emp-form"
-          onSubmit={() => {
-            formik.handleSubmit();
-            imgSubmit();
-          }}
-        >
-          <div className="signup-profile-pic__container">
-            <img
-              src={imagePreview || profileImg || uploadingImg}
-              className="signup-profile-pic"
-              alt="profile pics"
-            />
-            <label htmlFor="image-upload" className="image-upload-label">
-              <BsPlusCircleFill
-                color={"#ce1212"}
-                size={25}
-                className="profile_pic_add_icons"
-              />
-            </label>
-            <input
-              type="file"
-              id="image-upload"
-              hidden
-              accept="image/jpeg, image/png"
-              name="profile"
-              onChange={(e) => {
-                validateImg();
-                formik.handleChange();
-              }}
-              value={formik.values.profile}
-            />
-          </div>
-
+        <form className="create-emp-form" onSubmit={formik.handleSubmit}>
           <div className="createUser_input_form">
             <input
               type="text"
